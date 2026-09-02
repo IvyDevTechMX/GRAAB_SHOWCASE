@@ -1,0 +1,10 @@
+{
+  "description": "A minimalist, elegant ecommerce platform for consignment clothing and accessories showcasing products with a cohesive, reusable design system.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* ─── Brand Colors ─────────────────────────────── */
+  --color-primary: #7a6050;
+  --color-primary-dark: #5e4736;
+  --color-primary-light: #f0eae4;
+
+  --color-secondary: #b5a99a;
+  --color-secondary-dark: #9e9080;
+
+  /* ─── Surfaces ──────────────────────────────────── */
+  --color-canvas: #faf8f5;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f2ee;
+  --color-surface-warm: #ede8e3;
+
+  /* ─── Text ──────────────────────────────────────── */
+  --color-foreground: #1c1917;
+  --color-muted: #78716c;
+  --color-subtle: #a8a29e;
+  --color-faint: #c4beb9;
+  --color-ink: #faf8f5;
+
+  /* ─── Borders ───────────────────────────────────── */
+  --color-border: #e7e5e4;
+  --color-border-strong: #d6d3d1;
+
+  /* ─── Status ────────────────────────────────────── */
+  --color-success: #4a7c59;
+  --color-success-bg: #ebf4ef;
+  --color-warning: #b58b3a;
+  --color-warning-bg: #fbf3e3;
+  --color-error: #b05252;
+  --color-error-bg: #fbecec;
+
+  /* ─── Typography ────────────────────────────────── */
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+
+  /* ─── Shadows ───────────────────────────────────── */
+  --shadow-soft: 0 2px 8px 0 rgb(28 25 23 / 0.06);
+  --shadow-card: 0 4px 16px 0 rgb(28 25 23 / 0.08);
+  --shadow-modal: 0 20px 60px 0 rgb(28 25 23 / 0.18);
+  --shadow-dropdown: 0 8px 24px 0 rgb(28 25 23 / 0.10);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    color: var(--color-foreground);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-light);
+    color: var(--color-foreground);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
